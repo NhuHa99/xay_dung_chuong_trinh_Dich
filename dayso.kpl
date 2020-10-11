@@ -1,0 +1,19 @@
+Program SUMARRAY; (*tinh tong day so *)
+VAR     A: ARRAY(. 100 .) OF INTEGER;
+        SUM: INTEGER;
+        I: INTEGER;
+        N: INTEGER;
+BEGIN
+    SUM := 0;
+    N := READI;
+    (*Nhap gia tri*)
+    FOR I := 1 TO N DO
+        A(.I.) := READI;
+    
+    (*Tinh Sum*)
+    FOR I := 1 TO N DO
+        SUM := SUM + A(.I.);
+
+    CALL WRITEI(SUM);
+    CALL WRITELN;
+END. 

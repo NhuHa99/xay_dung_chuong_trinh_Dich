@@ -1,0 +1,80 @@
+PROGRAM TINHTONG; (* Tinh tong day so*)
+
+CONST MAX = 100;
+
+TYPE T = INTEGER;
+
+VAR A : ARRAY(. 10 .) OF T;
+
+N : INTEGER;
+
+I : INTEGER;
+
+S : INTEGER;
+
+BEGIN
+
+CALL WRITEC('N');
+
+CALL WRITEC('H');
+
+CALL WRITEC('A');
+
+CALL WRITEC('P');
+
+N := READI;
+
+FOR I := 1 TO N DO
+
+A(.I.) := READI;
+
+CALL WRITELN;
+
+I :=1;
+
+S :=0;
+
+WHILE I <= N DO
+
+BEGIN
+
+S := S + A(.I.);
+
+I := I + 1;
+
+END;
+
+CALL WRITEC('T');
+
+CALL WRITEC('O');
+
+CALL WRITEC('N');
+
+CALL WRITEC('G');
+
+CALL WRITEI(S);
+
+CALL WRITELN;
+
+END.
+
+
+Program SUMARRAY; (*tinh tong day so *)
+VAR     A: ARRAY(. 100 .) OF INTEGER;
+        SUM: INTEGER;
+        I: INTEGER;
+        N: INTEGER;
+BEGIN
+    SUM := 0;
+    N := READI;
+    (*Nhap gia tri*)
+    FOR I := 1 TO N DO
+        A(.I.) := READI;
+    
+    (*Tinh Sum*)
+    FOR I := 1 TO N DO
+        SUM := SUM + A(.I.);
+
+    CALL WRITEI(SUM);
+    CALL WRITELN;
+END. 
